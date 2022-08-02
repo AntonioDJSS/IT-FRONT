@@ -15,7 +15,7 @@ function Filtrador({ data }) {
       return Folio.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    if (searchWord.length != "18") {
+    if (searchWord.length != 18) {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
