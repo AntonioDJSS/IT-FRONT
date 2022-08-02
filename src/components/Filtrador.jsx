@@ -11,10 +11,11 @@ function Filtrador({ data }) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+      const Folio = value.id;
+      return Folio.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    if (searchWord === "") {
+    if (searchWord.length != "18") {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
@@ -65,7 +66,19 @@ function Filtrador({ data }) {
                             scope="col"
                             className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                           >
+                            Folio
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                          >
                             Nombre
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                          >
+                            Apellido
                           </th>
                           <th
                             scope="col"
@@ -77,43 +90,54 @@ function Filtrador({ data }) {
                             scope="col"
                             className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                           >
-                            Status
+                            Horas
                           </th>
                           <th
                             scope="col"
                             className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                           >
-                            Horas
+                            Estatus
                           </th>
                         </tr>
                       </thead>
                       {filteredData.length != 0 && (
                         <tbody className="min-w-full divide-y divide-gray-300">
-                          {filteredData.slice(0, 15).map((value, key) => {
+                          {filteredData.slice(0, 18).map((value, key) => {
                             return (
                               <>
-                                <tr>
-                                  <td className=" whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
+                                <tr key={value.id}>
+                                  <td className=" whitespace-nowrap py-4 pl-4 text-sm ">
                                     <div className="flex items-center">
                                       <div className="ml-4">
                                         <div className="font-medium text-gray-900">
-                                          {value.title}
+                                          {value.id}
                                         </div>
                                       </div>
                                     </div>
                                   </td>
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                     <div className="text-gray-900">
-                                      {value.language}
+                                      {value.nombre}
+                                    </div>
+                                  </td>
+
+                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    {value.apellido}
+                                  </td>
+                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    <div className="text-gray-900">
+                                      {value.curso}
+                                    </div>
+                                  </td>
+                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    <div className="text-gray-900">
+                                      {value.horas}
                                     </div>
                                   </td>
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                     <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-                                      Activo
+                                      {value.status}
                                     </span>
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    {value.pages}
                                   </td>
                                 </tr>
                               </>
