@@ -211,7 +211,7 @@ export default function Inicio() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <img
               className="relative rounded-lg shadow-lg"
-              src="https://cdn.discordapp.com/attachments/989932796527116334/1002020020253110352/unknown.png"
+              src="https://imgur.com/SPJ2TXy.png"
               alt="App screenshot"
             />
           </div>

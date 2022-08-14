@@ -11,11 +11,13 @@ function Filtrador({ data }) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      const Folio = value.id;
+      const Folio = value._id;
+      console.log(value._id);
+
       return Folio.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    if (searchWord.length != 18) {
+    if (searchWord.length != 24) {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
@@ -25,6 +27,13 @@ function Filtrador({ data }) {
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
+  };
+
+  const formatearFecha = (fechaFinalizacion) => {
+    const nuevaFecha = new Date(fechaFinalizacion);
+    return new Intl.DateTimeFormat("es-MX", { dateStyle: "long" }).format(
+      nuevaFecha
+    );
   };
 
   return (
@@ -90,6 +99,12 @@ function Filtrador({ data }) {
                             scope="col"
                             className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                           >
+                            Fecha de Finalización
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                          >
                             Horas
                           </th>
                           <th
@@ -102,15 +117,18 @@ function Filtrador({ data }) {
                       </thead>
                       {filteredData.length != 0 && (
                         <tbody className="min-w-full divide-y divide-gray-300">
-                          {filteredData.slice(0, 18).map((value, key) => {
+                          {filteredData.slice(0, 18).map((value) => {
                             return (
                               <>
-                                <tr key={value.id}>
-                                  <td className=" whitespace-nowrap py-4 pl-4 text-sm ">
+                                <tr>
+                                  <td
+                                    className=" whitespace-nowrap py-4 pl-4 text-sm "
+                                    key={value._id}
+                                  >
                                     <div className="flex items-center">
                                       <div className="ml-4">
                                         <div className="font-medium text-gray-900">
-                                          {value.id}
+                                          {value._id}
                                         </div>
                                       </div>
                                     </div>
@@ -122,11 +140,16 @@ function Filtrador({ data }) {
                                   </td>
 
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    {value.apellido}
+                                    {value.apellidos}
                                   </td>
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                     <div className="text-gray-900">
                                       {value.curso}
+                                    </div>
+                                  </td>
+                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                    <div className="text-gray-900">
+                                      {formatearFecha(value.fechaFinalizacion)}
                                     </div>
                                   </td>
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
@@ -136,7 +159,7 @@ function Filtrador({ data }) {
                                   </td>
                                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                     <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-                                      {value.status}
+                                      {value.estatus}
                                     </span>
                                   </td>
                                 </tr>

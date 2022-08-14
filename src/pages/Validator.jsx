@@ -2,14 +2,16 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Title from "../components/Title";
 import Filtrador from "../components/Filtrador";
-import Data from "../Data.json";
+import useDash from "../hooks/useDash";
 
 const Validator = () => {
+  const { clientes } = useDash();
+
   return (
     <>
       <Header />
       <Title />
-      <Filtrador data={Data} />
+      <Filtrador data={clientes} />
       <Footer />
     </>
   );

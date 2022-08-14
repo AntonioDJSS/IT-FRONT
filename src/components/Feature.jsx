@@ -19,7 +19,7 @@ export default function Feature() {
         <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
           <img
             className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-            src="https://cdn.discordapp.com/attachments/989932796527116334/1002027620973678733/unknown.png"
+            src="https://i.imgur.com/k337IfU.png"
             alt=""
           />
         </div>
