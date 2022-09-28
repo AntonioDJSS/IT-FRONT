@@ -11,13 +11,13 @@ function Filtrador({ data }) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      const Folio = value._id;
-      console.log(value._id);
+      const Folio = value.folio;
+      console.log(value.folio);
 
       return Folio.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    if (searchWord.length != 24) {
+    if (searchWord.length != 9) {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
@@ -64,115 +64,82 @@ function Filtrador({ data }) {
                 onChange={handleFilter}
               />
             </div>
-            <div className="mt-8 flex flex-col">
-              <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                  <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                    <table className="min-w-full divide-y divide-gray-300">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th
-                            scope="col"
-                            className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-                          >
-                            Folio
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Nombre
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Apellido
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Curso
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Fecha de Finalización
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Horas
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Estatus
-                          </th>
-                        </tr>
-                      </thead>
-                      {filteredData.length != 0 && (
-                        <tbody className="min-w-full divide-y divide-gray-300">
-                          {filteredData.slice(0, 18).map((value) => {
-                            return (
-                              <>
-                                <tr>
-                                  <td
-                                    className=" whitespace-nowrap py-4 pl-4 text-sm "
-                                    key={value._id}
-                                  >
-                                    <div className="flex items-center">
-                                      <div className="ml-4">
-                                        <div className="font-medium text-gray-900">
-                                          {value._id}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <div className="text-gray-900">
-                                      {value.nombre}
-                                    </div>
-                                  </td>
 
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    {value.apellidos}
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <div className="text-gray-900">
-                                      {value.curso}
-                                    </div>
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <div className="text-gray-900">
-                                      {formatearFecha(value.fechaFinalizacion)}
-                                    </div>
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <div className="text-gray-900">
-                                      {value.horas}
-                                    </div>
-                                  </td>
-                                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-                                      {value.estatus}
-                                    </span>
-                                  </td>
-                                </tr>
-                              </>
-                            );
-                          })}
-                        </tbody>
-                      )}
-                    </table>
-                  </div>
-                </div>
+            {filteredData.length != 0 && (
+              <div>
+                {filteredData.slice(0, 18).map((value) => {
+                  return (
+                    <>
+                      <div className="mt-3 grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        <div
+                          key={value.id}
+                          className="mt-3 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-"
+                        >
+                          <div className=" px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Nombre/s:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{value.nombre}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
+                          <div className="px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Apellido/s:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{value.apellidos}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
+                          <div className="px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Emisión de Constancia:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{formatearFecha(value.createdAt)}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
+                          <div className="px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Nombre de Curso:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{value.curso}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
+                          <div className="px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Duración:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{value.horas}hrs</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
+                          <div className="px-4 py-5 sm:p-6">
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                              Status del Certificado:
+                            </h3>
+                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                              <p>{value.estatus}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })}
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
