@@ -120,7 +120,7 @@ function Filtrador({ data }) {
                               Duración:
                             </h3>
                             <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
-                              <p>{value.horas}hrs</p>
+                              <p>{value.horas} HRS</p>
                             </div>
                           </div>
                         </div>
