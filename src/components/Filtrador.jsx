@@ -97,7 +97,7 @@ function Filtrador({ data }) {
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
                             <h3 className="leading-6 text-gray-500 text-sm">
-                              Emisión de Constancia:
+                              Emisión de constancia:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{formatearFecha(value.createdAt)}</p>
@@ -107,7 +107,7 @@ function Filtrador({ data }) {
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
                             <h3 className="leading-6 text-gray-500 text-sm">
-                              Nombre de Curso:
+                              Nombre de curso:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.curso}</p>
@@ -127,7 +127,7 @@ function Filtrador({ data }) {
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
                             <h3 className="leading-6 text-gray-500 text-sm">
-                              Status del Certificado:
+                              Status del certificado:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.estatus}</p>
