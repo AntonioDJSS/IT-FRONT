@@ -76,9 +76,7 @@ function Filtrador({ data }) {
                           className="mt-3 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-"
                         >
                           <div className=" px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
-                              Nombre:
-                            </h3>
+                            <h3 className="leading-6 text-gray-500">Nombre:</h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.nombre}</p>
                             </div>
@@ -86,7 +84,7 @@ function Filtrador({ data }) {
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
+                            <h3 className="leading-6 text-gray-500">
                               Apellidos:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
@@ -96,7 +94,7 @@ function Filtrador({ data }) {
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
+                            <h3 className="leading-6 text-gray-500">
                               Emisión de Constancia:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
@@ -106,7 +104,7 @@ function Filtrador({ data }) {
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
+                            <h3 className="leading-6 text-gray-500">
                               Nombre de Curso:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
@@ -116,7 +114,7 @@ function Filtrador({ data }) {
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
+                            <h3 className="leading-6 text-gray-500">
                               Duración:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
@@ -126,7 +124,7 @@ function Filtrador({ data }) {
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-base leading-6 text-gray-500">
+                            <h3 className="leading-6 text-gray-500">
                               Status del Certificado:
                             </h3>
                             <div className="mt-2 max-w-xl text-sm font-medium text-gray-900">
