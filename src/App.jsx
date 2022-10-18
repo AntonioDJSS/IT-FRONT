@@ -13,7 +13,10 @@ function App() {
           <Route path="/" element={<AuthLayout />}>
             <Route index element={<Inicio />} />
             <Route path="registros" element={<Validator />} />
+<<<<<<< HEAD
             <Route path="*" element={<P404 />} />
+=======
+>>>>>>> 3df9985f7bcbd0fec5315e4d9a075d768144d63b
           </Route>
         </Routes>
       </DashProvider>
