@@ -5,6 +5,8 @@ import useDash from "../hooks/useDash";
 import Area from "../components/Area";
 
 const Validator = () => {
+  const { clientes } = useDash();
+
   return (
     <>
       <Title />
