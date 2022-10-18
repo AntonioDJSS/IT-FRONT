@@ -1,10 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import {
-  NewspaperIcon,
-  MailIcon,
-  PhoneIcon,
-  SupportIcon,
-} from "@heroicons/react/outline";
 import Filtrador from "../components/Filtrador";
 import useDash from "../hooks/useDash";
 import Area from "../components/Area";
