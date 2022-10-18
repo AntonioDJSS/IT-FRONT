@@ -1,40 +1,79 @@
+/* This example requires Tailwind CSS v2.0+ */
+import {
+  NewspaperIcon,
+  MailIcon,
+  PhoneIcon,
+  SupportIcon,
+} from "@heroicons/react/outline";
+import Filtrador from "../components/Filtrador";
+import useDash from "../hooks/useDash";
+import Area from "../components/Area";
+
 export default function Title() {
+  const { clientes } = useDash();
+
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="md:ml-[10%]">
-        <div className="bg-white">
-          <div className="">
-            <div className="overflow-hidden md:rounded-bl-[200px] rounded-bl-[100px] bg-amber-500 shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
-              <div className="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
-                <div className="lg:self-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                    <span className="block">Validación de constancia</span>
-                    <span className="block">de participación</span>
-                  </h2>
-                  <p className="mt-4 text-lg leading-6 text-amber-100">
-                    Para verificar la validez de una constancia de participación
-                    en uno de los cursos de IKTAN Training debes ingresar el
-                    número de folio correspondiente a la constancia
-                  </p>
-                  <a
-                    href="#"
-                    className="mt-8 inline-flex items-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-amber-600 shadow hover:bg-indigo-50"
-                  >
-                    ¿No tienes una constancia?
-                  </a>
-                </div>
-              </div>
-              <div className="-mt-6 md:-mt-24 md:aspect-w-2 md:aspect-h-1">
+    <div className="bg-white">
+      {/* Header */}
+      <div className="relative pb-48 bg-gray-800">
+        <div className="absolute inset-0">
+          <img
+            className=" w-full h-full object-cover object-top"
+            src="https://imgur.com/Lh74MCR.png"
+            alt=""
+          />
+          <div
+            className="absolute inset-0 bg-gray-700 mix-blend-multiply"
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-56 sm:px-6 lg:px-8">
+          <div className="w-full py-6 flex items-center justify-between lg:border-none">
+            <div className="flex items-center">
+              <a href="#">
+                <span className="sr-only">IKTAN</span>
                 <img
-                  className="full translate-y-6 transform md:rounded-lg object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
-                  src="https://imgur.com/MGobBMh.png"
-                  alt="App screenshot"
+                  className="h-10 w-auto"
+                  src="https://imgur.com/zDZKFLN.png"
+                  alt=""
                 />
+              </a>
+              <div className="hidden ml-10 space-x-8 lg:block">
+                <a
+                  href="#"
+                  className="text-base font-medium text-white hover:text-teal-50"
+                >
+                  IKTAN TRAINING
+                </a>
               </div>
             </div>
           </div>
+          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
+            Validador de constancias
+          </h1>
+          <p className="mt-6 max-w-3xl text-xl text-gray-300">
+            Para verificar la validez de una constancia de participación en uno
+            de los cursos de IKTAN Training debes ingresar el número de folio
+            correspondiente a la constancia.
+          </p>
         </div>
       </div>
+
+      {/* Overlapping cards */}
+      <section
+        className="-mt-40 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="contact-heading"
+      >
+        <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-1 lg:gap-y-0 lg:gap-x-8">
+          <div className="flex flex-col bg-white rounded-2xl shadow-xl">
+            <div className="flex-1 relative pb-10">
+              <Area />
+              <Filtrador data={clientes} />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

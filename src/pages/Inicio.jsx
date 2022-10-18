@@ -6,8 +6,6 @@ const Inicio = () => {
   return (
     <>
       <Hero />
-      <Feature />
-      <Footer />
     </>
   );
 };

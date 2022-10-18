@@ -76,60 +76,60 @@ function Filtrador({ data }) {
                           className="mt-3 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-"
                         >
                           <div className=" px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
-                              Nombre/s:
+                            <h3 className="leading-6 text-gray-500 text-sm">
+                              Nombre:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.nombre}</p>
                             </div>
                           </div>
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
-                              Apellido/s:
+                            <h3 className="leading-6 text-gray-500 text-sm">
+                              Apellidos:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.apellidos}</p>
                             </div>
                           </div>
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
-                              Emisión de Constancia:
+                            <h3 className="leading-6 text-gray-500 text-sm">
+                              Emisión de constancia:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{formatearFecha(value.createdAt)}</p>
                             </div>
                           </div>
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
-                              Nombre de Curso:
+                            <h3 className="leading-6 text-gray-500 text-sm">
+                              Nombre de curso:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.curso}</p>
                             </div>
                           </div>
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                            <h3 className="leading-6 text-gray-500 text-sm">
                               Duración:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
-                              <p>{value.horas}hrs</p>
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
+                              <p>{value.horas} HRS</p>
                             </div>
                           </div>
                         </div>
                         <div className="mt-4 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-">
                           <div className="px-4 py-5 sm:p-6">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">
-                              Status del Certificado:
+                            <h3 className="leading-6 text-gray-500 text-sm">
+                              Status del certificado:
                             </h3>
-                            <div className="mt-2 max-w-xl text-sm text-gray-500">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
                               <p>{value.estatus}</p>
                             </div>
                           </div>

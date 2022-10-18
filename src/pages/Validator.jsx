@@ -10,8 +10,8 @@ const Validator = () => {
   return (
     <>
       <Title />
-      <Area />
-      <Filtrador data={clientes} />
+      {/*       <Area />
+      <Filtrador data={clientes} /> */}
       <Footer />
     </>
   );
