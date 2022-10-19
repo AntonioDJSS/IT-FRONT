@@ -139,7 +139,7 @@ function Filtrador({ data }) {
                             <h3 className="leading-6 text-gray-500 text-sm">
                               Observaciones:
                             </h3>
-                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
+                            <div className="uppercase mt-2 max-w-xl text-sm font-medium text-rose-500">
                               <p>No tienes observaciones.</p>
                             </div>
                           </div>
