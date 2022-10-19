@@ -42,7 +42,7 @@ export default function Title() {
               </div>
             </div>
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             Registro Público de Capacitación
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
