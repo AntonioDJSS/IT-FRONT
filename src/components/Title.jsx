@@ -43,7 +43,7 @@ export default function Title() {
             </div>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-            Validador de constancias
+            Registro Público de Capacitación
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
             Para verificar la validez de una constancia de participación en uno
