@@ -46,9 +46,9 @@ export default function Title() {
             Registro Público de Capacitación
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
-            Para verificar la validez de una constancia de participación en uno
-            de los cursos de IKTAN Training debes ingresar el número de folio
-            correspondiente a la constancia.
+            Para verificar la vigencia de tu capacitación debes ingresar el
+            número de folio que se encuentra en la parte inferior derecha de tu
+            constancia.
           </p>
         </div>
       </div>
