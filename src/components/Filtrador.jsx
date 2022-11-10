@@ -100,7 +100,7 @@ function Filtrador({ data }) {
                               Emisión de constancia:
                             </h3>
                             <div className="uppercase mt-2 max-w-xl text-sm font-medium text-gray-900">
-                              <p>{formatearFecha(value.createdAt)}</p>
+                              <p>{formatearFecha(value.fechaFinalizacion)}</p>
                             </div>
                           </div>
                         </div>
